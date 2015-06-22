@@ -245,7 +245,7 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 								Map<TokenSpan, Map<String, Double>> tempMap = billCats.get(sentIndex);
 								if (isPassive) lemmaV = "(passive) " + lemmaV.trim();
 								ArrayList<String> catSubj = null; ArrayList<String> catObj = null;
-								String topCatSubj = null; String topCatObj = null;
+								ArrayList<String> topCatSubj = null; ArrayList<String> topCatObj = null;
 								if (tempMap != null) {
 									for (Map.Entry<TokenSpan, Map<String, Double>> e : tempMap.entrySet()) {
 										TokenSpan ct = e.getKey();
@@ -254,9 +254,14 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 											double maxVal = -1;
 											for (Map.Entry<String, Double> ent : e.getValue().entrySet()) {
 												catSubj.add(ent.getKey());
-												if (ent.getValue() > maxVal) {
-													maxVal = ent.getValue();
-													topCatSubj = ent.getKey();
+												double val = ent.getValue();
+												if (val > maxVal) {
+													if (topCatSubj == null) topCatSubj = new ArrayList<String>();
+													maxVal = val;
+													topCatSubj.clear();
+													topCatSubj.add(ent.getKey());
+												} else if (val == maxVal) {
+													topCatSubj.add(ent.getKey());
 												}
 											}
 										}
@@ -265,9 +270,14 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 											double maxVal = -1;
 											for (Map.Entry<String, Double> ent : e.getValue().entrySet()) {
 												catObj.add(ent.getKey());
-												if (ent.getValue() > maxVal) {
-													maxVal = ent.getValue();
-													topCatObj = ent.getKey();
+												double val = ent.getValue();
+												if (val > maxVal) {
+													if (topCatObj == null) topCatObj = new ArrayList<String>();
+													maxVal = val;
+													topCatObj.clear();
+													topCatObj.add(ent.getKey());
+												} else if (val == maxVal) {
+													topCatObj.add(ent.getKey());
 												}
 											}
 										}
@@ -291,13 +301,31 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 											}
 										}
 									} else {
-										String type = topCatSubj + ":::" + topCatObj;
-										Map<String, Double> candidateRels = applicableRelations.get(type);
-										if (candidateRels != null) {
-											Iterator<Map.Entry<String, Double>> it1 = candidateRels.entrySet().iterator();
-											Map.Entry<String, Double> ent1 = it1.next();
-											String relation = ent1.getKey();
-											double conf = ent1.getValue();
+										for (String s : topCatSubj) {
+											for (String o : topCatObj) {
+												String type = s + ":::" + o;
+												Map<String, Double> candidateRels = applicableRelations.get(type);
+												if (candidateRels != null) {
+													Iterator<Map.Entry<String, Double>> it1 = candidateRels.entrySet().iterator();
+													while (it1.hasNext()) {
+														Map.Entry<String, Double> ent1 = it1.next();
+														String relation = ent1.getKey();
+														double conf = ent1.getValue();
+														verbs.add(new Triple<TokenSpan, String, Double>
+														(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
+																relation, conf));														
+													}
+												}
+											}
+										}
+										
+									}
+								} else {
+									if (verbToRelations.get(lemmaV) != null) {
+										Map<String, Double> candidateRelations = verbToRelations.get(lemmaV);
+										for (Map.Entry<String, Double> entry : candidateRelations.entrySet()) {
+											String relation = entry.getKey().split(" ")[1];
+											double conf = entry.getValue();
 											verbs.add(new Triple<TokenSpan, String, Double>
 											(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
 													relation, conf));
@@ -387,8 +415,8 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 		while (it.hasNext()) {
 			Map.Entry<String, String> e = it.next();
 			String relation = e.getKey();
-			Double conf = relationConfs.get(relation);
-			if (conf != null) {
+			if (relationConfs.get(relation) != null) {
+				double conf = relationConfs.get(relation);
 				String domain = e.getValue();
 				String range = ranges.get(relation);
 				
@@ -410,6 +438,8 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 							double prevVal = it1.next().getValue();
 							if (conf > prevVal) {
 								tempAL.clear();
+								tempAL.put(relation, conf);
+							} else if (conf == prevVal) {
 								tempAL.put(relation, conf);
 							}
 						}
