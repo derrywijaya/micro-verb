@@ -7,6 +7,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -26,9 +27,11 @@ import edu.cmu.ml.rtw.micro.cat.data.annotation.nlp.AnnotationTypeNLPCat;
 
 
 public class AnnotationVerb implements AnnotatorTokenSpan<String> {
-	private Map<String, Map<String, Double>> verbToRelations;
-	private Map<String, ArrayList<String>> parents;
-	
+	private Map<String, Map<String, Double>> verbToRelations, applicableRelations;
+	private Map<String, ArrayList<String>> parents, children;
+	private Map<String, String> domains;
+	private Map<String, String> ranges;
+
 	public static final AnnotationTypeNLP<String> NELL_VERB = new AnnotationTypeNLP<String>("nell-verb", String.class, Target.TOKEN_SPAN);
 	private static final AnnotationType<?>[] REQUIRED_ANNOTATIONS = new AnnotationType<?>[] {
 		AnnotationTypeNLP.TOKEN,
@@ -41,9 +44,14 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 
 	public AnnotationVerb() {
 		parents = new HashMap<String, ArrayList<String>>();
+		children = new HashMap<String, ArrayList<String>>();
 		verbToRelations = new HashMap<String, Map<String, Double>>();
+		domains = new HashMap<String, String>();
+		ranges = new HashMap<String, String>();
+		applicableRelations = new HashMap<String, Map<String, Double>>();
 		readHierarchy();
 		readMapping();
+		readDomainsAndRanges();
 		/*PipelineNLPStanford pipelineStanford = new PipelineNLPStanford(30);
 		PipelineNLPExtendable pipelineExtendable = new PipelineNLPExtendable();
 		pipelineExtendable.extend(new NELLMentionCategorizer());
@@ -92,7 +100,7 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 		Collection<AnnotationTypeNLP<?>> col = new ArrayList<AnnotationTypeNLP<?>>();
 		col.add(AnnotationTypeNLPCat.NELL_CATEGORY);
 		List<Annotation> annotations = document.toMicroAnnotation(col).getAllAnnotations();	
-		Map<Integer, Map<TokenSpan, ArrayList<String>>> billCats = new HashMap<Integer, Map<TokenSpan, ArrayList<String>>>();
+		Map<Integer, Map<TokenSpan, Map<String, Double>>> billCats = new HashMap<Integer, Map<TokenSpan, Map<String, Double>>>();
 		for (Annotation annotation : annotations) {
 			//System.out.println(annotation.getSpanStart() + "\t" + annotation.getSpanEnd() + "\t" + annotation.getStringValue());	
 			int startTokenIndex = -1;
@@ -114,11 +122,11 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 			if (startTokenIndex < 0 || endTokenIndex < 0) {}
 			else {
 				TokenSpan billCat = new TokenSpan(document, sentenceIndex, startTokenIndex, endTokenIndex); 
-				Map<TokenSpan, ArrayList<String>> tempMap = billCats.get(sentenceIndex);
-				if (tempMap == null) tempMap = new HashMap<TokenSpan, ArrayList<String>>();
-				ArrayList<String> cats = tempMap.get(billCat);
-				if (cats == null) cats = new ArrayList<String>();
-				cats.add(annotation.getStringValue());
+				Map<TokenSpan, Map<String, Double>> tempMap = billCats.get(sentenceIndex);
+				if (tempMap == null) tempMap = new HashMap<TokenSpan, Map<String, Double>>();
+				Map<String, Double> cats = tempMap.get(billCat);
+				if (cats == null) cats = new HashMap<String, Double>();
+				cats.put(annotation.getStringValue(), annotation.getConfidence());
 				tempMap.put(billCat, cats);
 				billCats.put(sentenceIndex, tempMap);
 			}
@@ -234,17 +242,34 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 								int obj = foundVerbObjects.get(i);
 								String lemmaV = foundVerbs.get(i);
 								TokenSpan tokenSpanV = foundVerbTokenSpans.get(i);
-								Map<TokenSpan, ArrayList<String>> tempMap = billCats.get(sentIndex);
+								Map<TokenSpan, Map<String, Double>> tempMap = billCats.get(sentIndex);
 								if (isPassive) lemmaV = "(passive) " + lemmaV.trim();
 								ArrayList<String> catSubj = null; ArrayList<String> catObj = null;
+								String topCatSubj = null; String topCatObj = null;
 								if (tempMap != null) {
-									for (Map.Entry<TokenSpan, ArrayList<String>> e : tempMap.entrySet()) {
+									for (Map.Entry<TokenSpan, Map<String, Double>> e : tempMap.entrySet()) {
 										TokenSpan ct = e.getKey();
 										if (ct.containsToken(sentIndex, subj)) {
-											catSubj = e.getValue();
+											catSubj = new ArrayList<String>();
+											double maxVal = -1;
+											for (Map.Entry<String, Double> ent : e.getValue().entrySet()) {
+												catSubj.add(ent.getKey());
+												if (ent.getValue() > maxVal) {
+													maxVal = ent.getValue();
+													topCatSubj = ent.getKey();
+												}
+											}
 										}
 										if (ct.containsToken(sentIndex, obj)) {
-											catObj = e.getValue();
+											catObj = new ArrayList<String>();
+											double maxVal = -1;
+											for (Map.Entry<String, Double> ent : e.getValue().entrySet()) {
+												catObj.add(ent.getKey());
+												if (ent.getValue() > maxVal) {
+													maxVal = ent.getValue();
+													topCatObj = ent.getKey();
+												}
+											}
 										}
 									}
 									
@@ -265,20 +290,29 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 															relation, conf));
 											}
 										}
+									} else {
+										String type = topCatSubj + ":::" + topCatObj;
+										Map<String, Double> candidateRels = applicableRelations.get(type);
+										if (candidateRels != null) {
+											Iterator<Map.Entry<String, Double>> it1 = candidateRels.entrySet().iterator();
+											Map.Entry<String, Double> ent1 = it1.next();
+											String relation = ent1.getKey();
+											double conf = ent1.getValue();
+											verbs.add(new Triple<TokenSpan, String, Double>
+											(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
+													relation, conf));
+										}
 									}
 								}
-								
 							}
 						}
 					}
 				}
-
 			}
 		}
-		
 		return verbs;
 	}
-	
+
 	private boolean hasCategory(ArrayList<String> catSubj, String domain) {
 		ArrayList<String> parent = parents.get(domain);
 		if (catSubj.contains(domain)) return true;
@@ -299,6 +333,11 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 				if (tempAL == null) tempAL = new ArrayList<String>();
 				tempAL.add(temp[2].trim().replace("concept:", ""));
 				parents.put(temp[0].trim().replace("concept:", ""), tempAL);
+				
+				ArrayList<String> tempCL = children.get(temp[2].trim().replace("concept:", ""));
+				if (tempCL == null) tempCL = new ArrayList<String>();
+				tempCL.add(temp[0].trim().replace("concept:", ""));
+				children.put(temp[2].trim().replace("concept:", ""), tempCL);
 			}
 			bfr.close();
 			
@@ -307,6 +346,79 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 		}
 	}
 		
+	private void readDomainsAndRanges() {
+		try {
+			InputStream is = AnnotationVerb.class.getResourceAsStream("/NELL-relationTypes.txt");
+			BufferedReader bfr = new BufferedReader(new InputStreamReader(is));
+			String line, temp[];
+			while ((line = bfr.readLine()) != null) {
+				temp = line.toLowerCase().split("\t");
+				String relation = temp[0].trim().replace("concept:", "");
+				String kind = temp[1].trim();
+				String type = temp[2].trim().replace("concept:", "");
+				if (kind.equalsIgnoreCase("domain")) {
+					domains.put(relation, type);
+				} else if (kind.equalsIgnoreCase("range")) {
+					ranges.put(relation, type);
+				}
+			}
+			bfr.close();
+		} catch (IOException ioe) {
+		    throw new RuntimeException(ioe);
+		}
+
+		Map<String, Double> relationConfs = new HashMap<String, Double>();
+		try {
+			InputStream is = AnnotationVerb.class.getResourceAsStream("/priorProbRelation.txt");
+			BufferedReader bfr = new BufferedReader(new InputStreamReader(is));
+			String line, temp[];
+			while ((line = bfr.readLine()) != null) {
+				temp = line.split("\t");
+				String relation = temp[1].trim().replace("concept:", "");
+				double conf = Double.parseDouble(temp[2].trim());
+				relationConfs.put(relation, conf);
+			}
+			bfr.close();
+		} catch (IOException ioe) {
+		    throw new RuntimeException(ioe);
+		}
+
+		Iterator<Map.Entry<String, String>> it = domains.entrySet().iterator();
+		while (it.hasNext()) {
+			Map.Entry<String, String> e = it.next();
+			String relation = e.getKey();
+			Double conf = relationConfs.get(relation);
+			if (conf != null) {
+				String domain = e.getValue();
+				String range = ranges.get(relation);
+				
+				ArrayList<String> childrenDomain = children.get(domain);
+				ArrayList<String> childrenRange = children.get(range);
+				if (childrenDomain == null) childrenDomain = new ArrayList<String>();
+				if (childrenRange == null) childrenRange = new ArrayList<String>();
+				childrenDomain.add(domain);
+				childrenRange.add(range);
+				
+				for (String d : childrenDomain) {
+					for (String r : childrenRange) {
+						String type = d + ":::" + r;
+						Map<String, Double> tempAL = applicableRelations.get(type);
+						if (tempAL == null) tempAL = new HashMap<String, Double>();
+						if (tempAL.size() == 0) tempAL.put(relation, conf);
+						else {
+							Iterator<Map.Entry<String, Double>> it1 = tempAL.entrySet().iterator();
+							double prevVal = it1.next().getValue();
+							if (conf > prevVal) {
+								tempAL.clear();
+								tempAL.put(relation, conf);
+							}
+						}
+						applicableRelations.put(type, tempAL);
+					}
+				}				
+			}
+		}
+	}
 	
 	private void readMapping() {
 		try {
@@ -328,18 +440,19 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 					verb = verbs[0].trim();
 					verb = verb.replace("(also in CPL)", "").trim();
 					score = Double.parseDouble(verbs[1].trim());
+					String rrelation;
 					if (verb.startsWith("arg1")) {
-						relation = domain + " " + relation + " " + range;
+						rrelation = domain + " " + relation + " " + range;
 						verb = verb.replace("arg1 ", "").trim();
 						verb = verb.replace(" arg2", "").trim();
 					} else {
-						relation = range + " " + relation + " " + domain;
+						rrelation = range + " " + relation + " " + domain;
 						verb = verb.replace("arg2 ", "").trim();
 						verb = verb.replace(" arg1", "").trim();
 					}
 					Map<String, Double> tempMap = verbToRelations.get(verb);
 					if (tempMap == null) tempMap = new HashMap<String, Double>();
-					tempMap.put(relation, score);
+					tempMap.put(rrelation, score);
 					verbToRelations.put(verb, tempMap);
 				}
 			}
