@@ -238,12 +238,14 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 							}
 						}
 						for (int i = 0; i < foundVerbs.size(); i++) {
+							boolean found = false;
+							String lemmaV = foundVerbs.get(i);
+							if (isPassive) lemmaV = "(passive) " + lemmaV.trim();
+							TokenSpan tokenSpanV = foundVerbTokenSpans.get(i);
+							
 							for (int subj : foundSubjects) {
 								int obj = foundVerbObjects.get(i);
-								String lemmaV = foundVerbs.get(i);
-								TokenSpan tokenSpanV = foundVerbTokenSpans.get(i);
 								Map<TokenSpan, Map<String, Double>> tempMap = billCats.get(sentIndex);
-								if (isPassive) lemmaV = "(passive) " + lemmaV.trim();
 								ArrayList<String> catSubj = null; ArrayList<String> catObj = null;
 								ArrayList<String> topCatSubj = null; ArrayList<String> topCatObj = null;
 								if (tempMap != null) {
@@ -285,22 +287,49 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 									
 								}
 								//System.out.println(catSubj.toString() + "\t" + catObj.toString() + "\t" + lemmaV);
-								if (catSubj != null && catObj != null) {
+								if (catSubj != null || catObj != null) {
 									if (verbToRelations.get(lemmaV) != null) {
 										Map<String, Double> candidateRelations = verbToRelations.get(lemmaV);
-										for (Map.Entry<String, Double> entry : candidateRelations.entrySet()) {
-											String domain = entry.getKey().split(" ")[0];
-											String relation = entry.getKey().split(" ")[1];
-											String range = entry.getKey().split(" ")[2];
-											double conf = entry.getValue();
-											if (hasCategory(catSubj, domain) && hasCategory(catObj, range)) {
-												//System.out.println(lemmaSubj + "(" + catSubj + ")" + "\t" + lemmaV + "\t" + lemmaObj + "(" + catObj + ")");
-												verbs.add(new Triple<TokenSpan, String, Double>
-													(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
-															relation, conf));
+										if (catSubj != null && catObj != null) { // if both verb, subj and obj are found
+											for (Map.Entry<String, Double> entry : candidateRelations.entrySet()) {
+												String domain = entry.getKey().split(" ")[0];
+												String relation = entry.getKey().split(" ")[1];
+												String range = entry.getKey().split(" ")[2];
+												double conf = entry.getValue();
+												if (hasCategory(catSubj, domain) && hasCategory(catObj, range)) {
+													//System.out.println(lemmaSubj + "(" + catSubj + ")" + "\t" + lemmaV + "\t" + lemmaObj + "(" + catObj + ")");
+													verbs.add(new Triple<TokenSpan, String, Double>
+														(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
+																relation, conf));
+													found = true;
+												}
+											}
+										} else if (catSubj != null) { // if verb and subj are found
+											for (Map.Entry<String, Double> entry : candidateRelations.entrySet()) {
+												String domain = entry.getKey().split(" ")[0];
+												String relation = entry.getKey().split(" ")[1];
+												double conf = entry.getValue();
+												if (hasCategory(catSubj, domain)) {
+													verbs.add(new Triple<TokenSpan, String, Double>
+														(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
+																relation, conf));
+													found = true;
+												}
+											}
+										} else if (catObj != null) { // if verb and obj are found
+											for (Map.Entry<String, Double> entry : candidateRelations.entrySet()) {
+												String relation = entry.getKey().split(" ")[1];
+												String range = entry.getKey().split(" ")[2];
+												double conf = entry.getValue();
+												if (hasCategory(catObj, range)) {
+													verbs.add(new Triple<TokenSpan, String, Double>
+														(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
+																relation, conf));
+													found = true;
+												}
 											}
 										}
-									} else {
+									} else if (topCatSubj != null && topCatObj != null) { // not found in verb-relation mapping, use the types to choose candidate relations
 										for (String s : topCatSubj) {
 											for (String o : topCatObj) {
 												String type = s + ":::" + o;
@@ -313,23 +342,24 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 														double conf = ent1.getValue();
 														verbs.add(new Triple<TokenSpan, String, Double>
 														(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
-																relation, conf));														
+																relation, conf));	
+														found = true;
 													}
 												}
 											}
 										}
-										
 									}
-								} else {
-									if (verbToRelations.get(lemmaV) != null) {
-										Map<String, Double> candidateRelations = verbToRelations.get(lemmaV);
-										for (Map.Entry<String, Double> entry : candidateRelations.entrySet()) {
-											String relation = entry.getKey().split(" ")[1];
-											double conf = entry.getValue();
-											verbs.add(new Triple<TokenSpan, String, Double>
-											(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
-													relation, conf));
-										}
+								} 
+							}
+							if (!found) { // if no subject/object; just use the verb without types
+								if (verbToRelations.get(lemmaV) != null) {
+									Map<String, Double> candidateRelations = verbToRelations.get(lemmaV);
+									for (Map.Entry<String, Double> entry : candidateRelations.entrySet()) {
+										String relation = entry.getKey().split(" ")[1];
+										double conf = entry.getValue();
+										verbs.add(new Triple<TokenSpan, String, Double>
+										(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
+												relation, conf));
 									}
 								}
 							}
