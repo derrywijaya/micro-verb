@@ -176,17 +176,17 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 										}
 										ArrayList<TokenSpan> tempAL = foundVerbPPs.get(verbPP);
 										if (tempAL == null) tempAL = new ArrayList<TokenSpan>();
-										tempAL.add(tokenVerbPPSpan);
+										if (!tempAL.contains(tokenVerbPPSpan)) tempAL.add(tokenVerbPPSpan);
 										ArrayList<Integer> tempALI = foundVerbPPObjects.get(verbPP);
 										if (tempALI == null) tempALI = new ArrayList<Integer>();
-										tempALI.add(depIndex);
+										if (!tempALI.contains(depIndex)) tempALI.add(depIndex);
 										foundVerbPPs.put(verbPP, tempAL);
 										foundVerbPPObjects.put(verbPP, tempALI);
 										break;
 									}
 								}
 							} else if (type.startsWith("nsubj") || type.equalsIgnoreCase("agent")) {
-								foundSubjects.add(depIndex);
+								if (!foundSubjects.contains(depIndex)) foundSubjects.add(depIndex);
 								if (type.equalsIgnoreCase("nsubjpass")) {
 									isPassive = true;
 								}
@@ -201,7 +201,7 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 								}
 								foundVerbPRTs.put(verbPRT, tokenVerbPRTSpan);
 							} else if (type.equalsIgnoreCase("dobj")) {
-								foundDirectObjects.add(depIndex);
+								if (!foundDirectObjects.contains(depIndex)) foundDirectObjects.add(depIndex);
 							}
 						}
 						if (foundDirectObjects.size() > 0) {
@@ -238,11 +238,10 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 							}
 						}
 						for (int i = 0; i < foundVerbs.size(); i++) {
-							boolean found = false;
 							String lemmaV = foundVerbs.get(i);
 							if (isPassive) lemmaV = "(passive) " + lemmaV.trim();
 							TokenSpan tokenSpanV = foundVerbTokenSpans.get(i);
-							
+							Map<String, Double> found = new HashMap<String, Double>();
 							for (int subj : foundSubjects) {
 								int obj = foundVerbObjects.get(i);
 								Map<TokenSpan, Map<String, Double>> tempMap = billCats.get(sentIndex);
@@ -255,15 +254,15 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 											catSubj = new ArrayList<String>();
 											double maxVal = -1;
 											for (Map.Entry<String, Double> ent : e.getValue().entrySet()) {
-												catSubj.add(ent.getKey());
+												if (!catSubj.contains(ent.getKey())) catSubj.add(ent.getKey());
 												double val = ent.getValue();
 												if (val > maxVal) {
 													if (topCatSubj == null) topCatSubj = new ArrayList<String>();
 													maxVal = val;
 													topCatSubj.clear();
-													topCatSubj.add(ent.getKey());
+													if (!topCatSubj.contains(ent.getKey())) topCatSubj.add(ent.getKey());
 												} else if (val == maxVal) {
-													topCatSubj.add(ent.getKey());
+													if (!topCatSubj.contains(ent.getKey())) topCatSubj.add(ent.getKey());
 												}
 											}
 										}
@@ -271,15 +270,15 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 											catObj = new ArrayList<String>();
 											double maxVal = -1;
 											for (Map.Entry<String, Double> ent : e.getValue().entrySet()) {
-												catObj.add(ent.getKey());
+												if (!catObj.contains(ent.getKey())) catObj.add(ent.getKey());
 												double val = ent.getValue();
 												if (val > maxVal) {
 													if (topCatObj == null) topCatObj = new ArrayList<String>();
 													maxVal = val;
 													topCatObj.clear();
-													topCatObj.add(ent.getKey());
+													if (!topCatObj.contains(ent.getKey())) topCatObj.add(ent.getKey());
 												} else if (val == maxVal) {
-													topCatObj.add(ent.getKey());
+													if (!topCatObj.contains(ent.getKey())) topCatObj.add(ent.getKey());
 												}
 											}
 										}
@@ -298,10 +297,11 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 												double conf = entry.getValue();
 												if (hasCategory(catSubj, domain) && hasCategory(catObj, range)) {
 													//System.out.println(lemmaSubj + "(" + catSubj + ")" + "\t" + lemmaV + "\t" + lemmaObj + "(" + catObj + ")");
-													verbs.add(new Triple<TokenSpan, String, Double>
+													/*verbs.add(new Triple<TokenSpan, String, Double>
 														(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
-																relation, conf));
-													found = true;
+																"svo:" +relation, conf));*/
+													found.put(relation, conf);
+													
 												}
 											}
 										} else if (catSubj != null) { // if verb and subj are found
@@ -310,10 +310,10 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 												String relation = entry.getKey().split(" ")[1];
 												double conf = entry.getValue();
 												if (hasCategory(catSubj, domain)) {
-													verbs.add(new Triple<TokenSpan, String, Double>
+													/*verbs.add(new Triple<TokenSpan, String, Double>
 														(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
-																relation, conf));
-													found = true;
+																"sv:" + entry.getKey() + ":" + relation, conf));*/
+													found.put(relation, conf);
 												}
 											}
 										} else if (catObj != null) { // if verb and obj are found
@@ -322,10 +322,10 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 												String range = entry.getKey().split(" ")[2];
 												double conf = entry.getValue();
 												if (hasCategory(catObj, range)) {
-													verbs.add(new Triple<TokenSpan, String, Double>
+													/*verbs.add(new Triple<TokenSpan, String, Double>
 														(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
-																relation, conf));
-													found = true;
+																"vo:" + relation, conf));*/
+													found.put(relation, conf);
 												}
 											}
 										}
@@ -340,10 +340,10 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 														Map.Entry<String, Double> ent1 = it1.next();
 														String relation = ent1.getKey();
 														double conf = ent1.getValue();
-														verbs.add(new Triple<TokenSpan, String, Double>
+														/*verbs.add(new Triple<TokenSpan, String, Double>
 														(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
-																relation, conf));	
-														found = true;
+																"type:" + relation, conf));	*/
+														found.put(relation, conf);
 													}
 												}
 											}
@@ -351,7 +351,7 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 									}
 								} 
 							}
-							if (!found) { // if no subject/object; just use the verb without types
+							if (found.size() == 0) { // if no subject/object; just use the verb without types
 								if (verbToRelations.get(lemmaV) != null) {
 									Map<String, Double> candidateRelations = verbToRelations.get(lemmaV);
 									for (Map.Entry<String, Double> entry : candidateRelations.entrySet()) {
@@ -361,6 +361,14 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 										(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
 												relation, conf));
 									}
+								}
+							} else {
+								for (Map.Entry<String, Double> e : found.entrySet()) {
+									String relation = e.getKey();
+									double conf = e.getValue();
+									verbs.add(new Triple<TokenSpan, String, Double>
+									(new TokenSpan(document, sentIndex, tokenSpanV.getStartTokenIndex(), tokenSpanV.getEndTokenIndex()), 
+											relation, conf));
 								}
 							}
 						}
