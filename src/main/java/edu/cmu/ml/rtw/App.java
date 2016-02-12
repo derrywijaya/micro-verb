@@ -5,12 +5,14 @@ import java.util.List;
 import edu.cmu.ml.rtw.generic.data.DataTools;
 import edu.cmu.ml.rtw.generic.data.annotation.nlp.DocumentNLP;
 import edu.cmu.ml.rtw.generic.data.annotation.nlp.DocumentNLPInMemory;
+import edu.cmu.ml.rtw.generic.data.annotation.nlp.DocumentNLPMutable;
 import edu.cmu.ml.rtw.generic.data.annotation.nlp.Language;
 //import edu.cmu.ml.rtw.generic.data.annotation.nlp.TokenSpan;
 import edu.cmu.ml.rtw.generic.data.annotation.nlp.micro.Annotation;
 import edu.cmu.ml.rtw.generic.model.annotator.nlp.PipelineNLP;
 import edu.cmu.ml.rtw.generic.model.annotator.nlp.PipelineNLPExtendable;
 import edu.cmu.ml.rtw.generic.model.annotator.nlp.PipelineNLPStanford;
+import edu.cmu.ml.rtw.generic.data.annotation.nlp.SerializerDocumentNLPMicro;
 //import edu.cmu.ml.rtw.generic.util.Triple;
 //import edu.cmu.ml.rtw.micro.cat.data.CatDataTools;
 import edu.cmu.ml.rtw.micro.cat.data.annotation.nlp.NELLMentionCategorizer;
@@ -31,11 +33,12 @@ public class App
         PipelineNLP pipeline = pipelineStanford.weld(pipelineExtendable);
         DataTools dataTools = new DataTools();
         dataTools.addAnnotationTypeNLP(AnnotationVerb.NELL_VERB);
-        DocumentNLP document = new DocumentNLPInMemory(dataTools, 
+        DocumentNLPMutable document = new DocumentNLPInMemory(dataTools, 
           "Test document", 
-          "Barack Obama was born in Pittsburgh in 2000.",
-          Language.English, pipeline);
-        List<Annotation> annotations = document.toMicroAnnotation().getAllAnnotations();
+          "Barack Obama was born in Pittsburgh in 2000.");
+        pipeline.run(document);
+        SerializerDocumentNLPMicro microSerial = new SerializerDocumentNLPMicro(dataTools);
+        List<Annotation> annotations = microSerial.serialize(document).getAllAnnotations();
         for (Annotation annotation : annotations) {
           System.out.println(annotation.toJsonString());
         }
@@ -48,9 +51,9 @@ public class App
 		
 		DocumentNLP document = new DocumentNLPInMemory(new CatDataTools(), 
 				   "Test document", 
-				   "Barack Obama was born in Pittsburgh in 2000.",
-				   Language.English, pipeline);
+				   "Barack Obama was born in Pittsburgh in 2000.");
 		System.out.println("annotating DocumentNLPInMemory");
+                pipeline.run(document);
 		List<Triple<TokenSpan, String, Double>> verbs = av.annotate(document);
 		for (Triple<TokenSpan, String, Double> e : verbs) {
 			System.out.println("sentenceIndex = " + e.getFirst().getSentenceIndex() + "\t" + 

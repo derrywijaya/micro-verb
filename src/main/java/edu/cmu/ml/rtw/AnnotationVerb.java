@@ -18,12 +18,14 @@ import edu.cmu.ml.rtw.generic.data.annotation.nlp.DependencyParse;
 import edu.cmu.ml.rtw.generic.data.annotation.nlp.DependencyParse.Dependency;
 import edu.cmu.ml.rtw.generic.data.annotation.nlp.DependencyParse.Node;
 import edu.cmu.ml.rtw.generic.data.annotation.nlp.DocumentNLP;
+import edu.cmu.ml.rtw.generic.data.annotation.nlp.DocumentNLPMutable;
 import edu.cmu.ml.rtw.generic.data.annotation.nlp.PoSTag;
 import edu.cmu.ml.rtw.generic.data.annotation.nlp.TokenSpan;
 import edu.cmu.ml.rtw.generic.data.annotation.nlp.micro.Annotation;
 import edu.cmu.ml.rtw.generic.model.annotator.nlp.AnnotatorTokenSpan;
 import edu.cmu.ml.rtw.generic.util.Triple;
 import edu.cmu.ml.rtw.micro.cat.data.annotation.nlp.AnnotationTypeNLPCat;
+import edu.cmu.ml.rtw.micro.cat.data.CatDataTools;
 
 
 public class AnnotationVerb implements AnnotatorTokenSpan<String> {
@@ -97,39 +99,18 @@ public class AnnotationVerb implements AnnotatorTokenSpan<String> {
 
 	@Override
 	public List<Triple<TokenSpan, String, Double>> annotate(DocumentNLP document) {
-		Collection<AnnotationTypeNLP<?>> col = new ArrayList<AnnotationTypeNLP<?>>();
-		col.add(AnnotationTypeNLPCat.NELL_CATEGORY);
-		List<Annotation> annotations = document.toMicroAnnotation(col).getAllAnnotations();	
 		Map<Integer, Map<TokenSpan, Map<String, Double>>> billCats = new HashMap<Integer, Map<TokenSpan, Map<String, Double>>>();
-		for (Annotation annotation : annotations) {
-			//System.out.println(annotation.getSpanStart() + "\t" + annotation.getSpanEnd() + "\t" + annotation.getStringValue());	
-			int startTokenIndex = -1;
-			int endTokenIndex = -1;
-			int sentenceIndex = -1;
-			int sentCount = document.getSentenceCount();
-			for (int j = 0; j < sentCount; j++) {
-				int tokenCount = document.getSentenceTokenCount(j);
-				for (int i = 0; i < tokenCount; i++) {
-					if (document.getToken(j, i).getCharSpanStart() == annotation.getSpanStart())
-						startTokenIndex = i;
-					if (document.getToken(j, i).getCharSpanEnd() == annotation.getSpanEnd()) {
-						endTokenIndex = i + 1;
-						sentenceIndex = j;
-						break;
-					}
-				}
-			}
-			if (startTokenIndex < 0 || endTokenIndex < 0) {}
-			else {
-				TokenSpan billCat = new TokenSpan(document, sentenceIndex, startTokenIndex, endTokenIndex); 
-				Map<TokenSpan, Map<String, Double>> tempMap = billCats.get(sentenceIndex);
-				if (tempMap == null) tempMap = new HashMap<TokenSpan, Map<String, Double>>();
-				Map<String, Double> cats = tempMap.get(billCat);
-				if (cats == null) cats = new HashMap<String, Double>();
-				cats.put(annotation.getStringValue(), annotation.getConfidence());
-				tempMap.put(billCat, cats);
-				billCats.put(sentenceIndex, tempMap);
-			}
+                for (Triple<TokenSpan, String, Double> triple : document.getTokenSpanAnnotationConfidences(AnnotationTypeNLPCat.NELL_CATEGORY)) {
+                        TokenSpan first = triple.getFirst();
+                        int sentenceIndex = first.getSentenceIndex();
+			TokenSpan billCat = new TokenSpan(document, sentenceIndex, first.getStartTokenIndex(), first.getEndTokenIndex());
+                        Map<TokenSpan, Map<String, Double>> tempMap = billCats.get(sentenceIndex);
+                        if (tempMap == null) tempMap = new HashMap<TokenSpan, Map<String, Double>>();
+                        Map<String, Double> cats = tempMap.get(billCat);
+                        if (cats == null) cats = new HashMap<String, Double>();
+                        cats.put(triple.getSecond(), triple.getThird());
+                        tempMap.put(billCat, cats);
+                        billCats.put(sentenceIndex, tempMap);
 		}
 		List<Triple<TokenSpan, String, Double>> verbs = new ArrayList<Triple<TokenSpan, String, Double>>();
 		
