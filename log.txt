@@ -1,0 +1,431 @@
+[INFO] Error stacktraces are turned on.
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building micro-verb 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- exec-maven-plugin:1.4.0:java (default-cli) @ micro-verb ---
+Testing Verb Annotation!
+Deserializing features...
+Finished deserializing 33 features.
+Deserializing abstractthing model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.abstractthing
+Deserializing academicfield model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.academicfield
+Deserializing actor model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.actor
+Deserializing agent model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.agent
+Deserializing agriculturalproduct model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.agriculturalproduct
+Deserializing airport model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.airport
+Deserializing amphibian model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.amphibian
+Deserializing animal model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.animal
+Deserializing aquarium model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.aquarium
+Deserializing arachnid model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.arachnid
+Deserializing archaea model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.archaea
+Deserializing architect model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.architect
+Deserializing artery model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.artery
+Deserializing arthropod model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.arthropod
+Deserializing astronaut model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.astronaut
+Deserializing athlete model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.athlete
+Deserializing attraction model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.attraction
+Deserializing automobileengine model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.automobileengine
+Deserializing automobilemaker model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.automobilemaker
+Deserializing automobilemodel model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.automobilemodel
+Deserializing awardtrophytournament model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.awardtrophytournament
+Deserializing bacteria model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.bacteria
+Deserializing bakedgood model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.bakedgood
+Deserializing bank model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.bank
+Deserializing bathroomitem model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.bathroomitem
+Deserializing beach model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.beach
+Deserializing bedroomitem model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.bedroomitem
+Deserializing beverage model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.beverage
+Deserializing biotechcompany model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.biotechcompany
+WARNING: Failed to deserialize biotechcompany model.  Maybe empty?
+Deserializing bird model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.bird
+Deserializing blog model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.blog
+Deserializing boardgame model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.boardgame
+Deserializing bodypart model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.bodypart
+Deserializing bone model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.bone
+Deserializing book model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.book
+Deserializing braintissue model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.braintissue
+Deserializing bridge model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.bridge
+Deserializing building model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.building
+Deserializing buildingfeature model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.buildingfeature
+Deserializing buildingmaterial model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.buildingmaterial
+Deserializing candy model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.candy
+Deserializing cardgame model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.cardgame
+Deserializing cave model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.cave
+Deserializing celebrity model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.celebrity
+Deserializing celltype model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.celltype
+Deserializing ceo model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.ceo
+Deserializing charactertrait model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.charactertrait
+Deserializing cheese model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.cheese
+Deserializing chef model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.chef
+Deserializing chemical model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.chemical
+Deserializing city model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.city
+Deserializing clothing model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.clothing
+Deserializing coach model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.coach
+Deserializing cognitiveactions model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.cognitiveactions
+Deserializing color model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.color
+Deserializing comedian model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.comedian
+Deserializing company model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.company
+Deserializing condiment model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.condiment
+Deserializing conference model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.conference
+Deserializing consumerelectronicitem model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.consumerelectronicitem
+Deserializing continent model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.continent
+Deserializing convention model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.convention
+Deserializing country model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.country
+Deserializing county model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.county
+Deserializing creativework model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.creativework
+Deserializing creditunion model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.creditunion
+Deserializing crimeorcharge model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.crimeorcharge
+Deserializing criminal model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.criminal
+Deserializing crustacean model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.crustacean
+Deserializing currency model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.currency
+Deserializing date model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.date
+Deserializing dateliteral model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.dateliteral
+Deserializing dayofweek model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.dayofweek
+Deserializing director model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.director
+Deserializing disease model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.disease
+Deserializing drug model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.drug
+Deserializing economicsector model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.economicsector
+Deserializing election model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.election
+Deserializing emotion model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.emotion
+Deserializing ethnicgroup model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.ethnicgroup
+Deserializing event model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.event
+Deserializing eventoutcome model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.eventoutcome
+Deserializing farm model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.farm
+Deserializing female model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.female
+Deserializing filmfestival model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.filmfestival
+Deserializing fish model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.fish
+Deserializing flooritem model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.flooritem
+Deserializing food model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.food
+Deserializing fruit model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.fruit
+Deserializing fungus model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.fungus
+Deserializing furniture model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.furniture
+Deserializing game model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.game
+Deserializing gamescore model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.gamescore
+Deserializing geolocatablething model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.geolocatablething
+Deserializing geometricshape model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.geometricshape
+Deserializing geopoliticalentity model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.geopoliticalentity
+Deserializing geopoliticallocation model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.geopoliticallocation
+Deserializing geopoliticalorganization model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.geopoliticalorganization
+Deserializing governmentorganization model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.governmentorganization
+Deserializing grain model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.grain
+Deserializing grandprix model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.grandprix
+Deserializing hallwayitem model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.hallwayitem
+Deserializing highschool model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.highschool
+WARNING: Failed to deserialize highschool model.  Maybe empty?
+Deserializing highway model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.highway
+Deserializing hobby model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.hobby
+Deserializing hospital model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.hospital
+Deserializing hotel model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.hotel
+Deserializing householditem model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.householditem
+Deserializing humanagent model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.humanagent
+Deserializing insect model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.insect
+Deserializing invertebrate model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.invertebrate
+Deserializing island model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.island
+Deserializing item model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.item
+Deserializing jobposition model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.jobposition
+Deserializing journalist model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.journalist
+Deserializing judge model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.judge
+Deserializing kitchenitem model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.kitchenitem
+Deserializing lake model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.lake
+Deserializing landscapefeatures model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.landscapefeatures
+Deserializing language model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.language
+Deserializing legume model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.legume
+Deserializing llcoordinate model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.llcoordinate
+WARNING: Failed to deserialize llcoordinate model.  Maybe empty?
+Deserializing location model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.location
+Deserializing lymphnode model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.lymphnode
+Deserializing lyrics model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.lyrics
+WARNING: Failed to deserialize lyrics model.  Maybe empty?
+Deserializing magazine model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.magazine
+Deserializing male model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.male
+Deserializing mammal model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.mammal
+Deserializing meat model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.meat
+Deserializing mediacompany model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.mediacompany
+Deserializing mediatype model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.mediatype
+Deserializing medicalprocedure model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.medicalprocedure
+Deserializing meetingeventtitle model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.meetingeventtitle
+WARNING: Failed to deserialize meetingeventtitle model.  Maybe empty?
+Deserializing meetingeventtype model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.meetingeventtype
+WARNING: Failed to deserialize meetingeventtype model.  Maybe empty?
+Deserializing militaryconflict model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.militaryconflict
+Deserializing militaryeventtype model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.militaryeventtype
+Deserializing mlalgorithm model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.mlalgorithm
+WARNING: Failed to deserialize mlalgorithm model.  Maybe empty?
+Deserializing mlarea model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.mlarea
+WARNING: Failed to deserialize mlarea model.  Maybe empty?
+Deserializing mlauthor model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.mlauthor
+WARNING: Failed to deserialize mlauthor model.  Maybe empty?
+Deserializing mlconference model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.mlconference
+WARNING: Failed to deserialize mlconference model.  Maybe empty?
+Deserializing mldataset model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.mldataset
+WARNING: Failed to deserialize mldataset model.  Maybe empty?
+Deserializing mlmetric model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.mlmetric
+WARNING: Failed to deserialize mlmetric model.  Maybe empty?
+Deserializing mlsoftware model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.mlsoftware
+Deserializing model model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.model
+Deserializing mollusk model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.mollusk
+Deserializing monarch model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.monarch
+Deserializing month model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.month
+Deserializing monument model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.monument
+Deserializing mountain model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.mountain
+Deserializing mountainrange model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.mountainrange
+Deserializing movie model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.movie
+Deserializing muscle model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.muscle
+Deserializing museum model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.museum
+Deserializing musicalbum model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.musicalbum
+Deserializing musicartist model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.musicartist
+Deserializing musicfestival model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.musicfestival
+Deserializing musicgenre model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.musicgenre
+Deserializing musician model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.musician
+Deserializing musicinstrument model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.musicinstrument
+Deserializing musicsong model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.musicsong
+Deserializing nerve model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.nerve
+Deserializing newspaper model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.newspaper
+Deserializing nondiseasecondition model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.nondiseasecondition
+Deserializing nongovorganization model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.nongovorganization
+Deserializing nonneginteger model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.nonneginteger
+Deserializing nonprofitorganization model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.nonprofitorganization
+Deserializing nut model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.nut
+Deserializing officebuildingroom model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.officebuildingroom
+WARNING: Failed to deserialize officebuildingroom model.  Maybe empty?
+Deserializing officeitem model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.officeitem
+Deserializing olympics model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.olympics
+Deserializing organization model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.organization
+Deserializing park model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.park
+Deserializing parlourgame model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.parlourgame
+Deserializing perceptionaction model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.perceptionaction
+Deserializing perceptionevent model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.perceptionevent
+Deserializing person model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.person
+Deserializing personafrica model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.personafrica
+WARNING: Failed to deserialize personafrica model.  Maybe empty?
+Deserializing personalcareitem model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.personalcareitem
+Deserializing personantarctica model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.personantarctica
+WARNING: Failed to deserialize personantarctica model.  Maybe empty?
+Deserializing personasia model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.personasia
+WARNING: Failed to deserialize personasia model.  Maybe empty?
+Deserializing personaustralia model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.personaustralia
+WARNING: Failed to deserialize personaustralia model.  Maybe empty?
+Deserializing personbylocation model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.personbylocation
+Deserializing personcanada model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.personcanada
+WARNING: Failed to deserialize personcanada model.  Maybe empty?
+Deserializing personeurope model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.personeurope
+WARNING: Failed to deserialize personeurope model.  Maybe empty?
+Deserializing personmexico model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.personmexico
+WARNING: Failed to deserialize personmexico model.  Maybe empty?
+Deserializing personnorthamerica model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.personnorthamerica
+Deserializing personsouthamerica model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.personsouthamerica
+WARNING: Failed to deserialize personsouthamerica model.  Maybe empty?
+Deserializing personus model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.personus
+Deserializing physicalaction model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.physicalaction
+Deserializing physicalcharacteristic model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.physicalcharacteristic
+Deserializing physicsterm model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.physicsterm
+Deserializing physiologicalcondition model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.physiologicalcondition
+Deserializing placeofworship model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.placeofworship
+Deserializing planet model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.planet
+Deserializing plant model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.plant
+Deserializing poem model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.poem
+WARNING: Failed to deserialize poem model.  Maybe empty?
+Deserializing politicaloffice model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.politicaloffice
+Deserializing politicalparty model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.politicalparty
+Deserializing politician model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.politician
+Deserializing politicianus model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.politicianus
+Deserializing politicsbill model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.politicsbill
+Deserializing politicsblog model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.politicsblog
+Deserializing politicsgroup model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.politicsgroup
+Deserializing politicsissue model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.politicsissue
+Deserializing port model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.port
+Deserializing product model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.product
+Deserializing profession model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.profession
+Deserializing professionalorganization model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.professionalorganization
+Deserializing professor model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.professor
+Deserializing programminglanguage model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.programminglanguage
+Deserializing protein model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.protein
+Deserializing publication model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.publication
+Deserializing race model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.race
+Deserializing radiostation model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.radiostation
+Deserializing recipe model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.recipe
+Deserializing recordlabel model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.recordlabel
+Deserializing religion model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.religion
+Deserializing reptile model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.reptile
+Deserializing researchproject model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.researchproject
+Deserializing restaurant model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.restaurant
+Deserializing retailstore model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.retailstore
+Deserializing river model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.river
+Deserializing room model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.room
+Deserializing school model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.school
+Deserializing scientificterm model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.scientificterm
+WARNING: Failed to deserialize scientificterm model.  Maybe empty?
+Deserializing scientist model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.scientist
+Deserializing shoppingmall model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.shoppingmall
+Deserializing skiarea model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.skiarea
+Deserializing skyscraper model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.skyscraper
+Deserializing sociopolitical model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.sociopolitical
+Deserializing software model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.software
+Deserializing species model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.species
+Deserializing sport model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.sport
+Deserializing sportsequipment model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.sportsequipment
+Deserializing sportsevent model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.sportsevent
+Deserializing sportsgame model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.sportsgame
+Deserializing sportsleague model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.sportsleague
+Deserializing sportsteam model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.sportsteam
+Deserializing sportsteamposition model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.sportsteamposition
+Deserializing stadiumoreventvenue model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.stadiumoreventvenue
+Deserializing stateorprovince model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.stateorprovince
+Deserializing street model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.street
+Deserializing tableitem model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.tableitem
+Deserializing televisionnetwork model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.televisionnetwork
+Deserializing televisionshow model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.televisionshow
+Deserializing televisionstation model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.televisionstation
+Deserializing terroristorganization model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.terroristorganization
+Deserializing tool model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.tool
+Deserializing tradeunion model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.tradeunion
+Deserializing traditionalgame model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.traditionalgame
+Deserializing trail model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.trail
+Deserializing trainstation model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.trainstation
+Deserializing transportation model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.transportation
+Deserializing university model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.university
+Deserializing url model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.url
+WARNING: Failed to deserialize url model.  Maybe empty?
+Deserializing vegetable model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.vegetable
+Deserializing vehicle model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.vehicle
+Deserializing vein model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.vein
+Deserializing vertebrate model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.vertebrate
+Deserializing videogame model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.videogame
+Deserializing videogamesystem model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.videogamesystem
+Deserializing visualartform model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.visualartform
+Deserializing visualartist model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.visualartist
+Deserializing visualartmovement model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.visualartmovement
+Deserializing visualizableattribute model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.visualizableattribute
+Deserializing visualizableobject model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.visualizableobject
+Deserializing visualizablescene model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.visualizablescene
+Deserializing visualizablething model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.visualizablething
+Deserializing wallitem model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.wallitem
+Deserializing weapon model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.weapon
+Deserializing weatherphenomenon model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.weatherphenomenon
+Deserializing website model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.website
+Deserializing wine model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.wine
+Deserializing winery model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.winery
+Deserializing writer model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.writer
+Deserializing year model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.year
+Deserializing zipcode model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.zipcode
+Deserializing zoo model at models/GSTBinaryNELLNormalized/HazyFacc1_AllNELL_c90_e2000/LRBasel2.model.out.zoo
+Finished deserializing models.
+{"spanStart":0,"spanEnd":12,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |celebrity"}
+{"spanStart":0,"spanEnd":12,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |personbylocation"}
+{"spanStart":0,"spanEnd":12,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |person"}
+{"spanStart":0,"spanEnd":12,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |politician"}
+{"spanStart":0,"spanEnd":12,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |politicianus"}
+{"spanStart":0,"spanEnd":12,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |personus"}
+{"spanStart":0,"spanEnd":12,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |personnorthamerica"}
+{"spanStart":0,"spanEnd":12,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |male"}
+{"spanStart":30,"spanEnd":42,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |celebrity"}
+{"spanStart":30,"spanEnd":42,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |personbylocation"}
+{"spanStart":30,"spanEnd":42,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |person"}
+{"spanStart":30,"spanEnd":42,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |politician"}
+{"spanStart":30,"spanEnd":42,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |politicianus"}
+{"spanStart":30,"spanEnd":42,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |personus"}
+{"spanStart":30,"spanEnd":42,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |personnorthamerica"}
+{"spanStart":30,"spanEnd":42,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama |male"}
+{"spanStart":50,"spanEnd":64,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Michelle Obama |personbylocation"}
+{"spanStart":50,"spanEnd":64,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Michelle Obama |person"}
+{"spanStart":50,"spanEnd":64,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Michelle Obama |politician"}
+{"spanStart":50,"spanEnd":64,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Michelle Obama |politicianus"}
+{"spanStart":50,"spanEnd":64,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Michelle Obama |personus"}
+{"spanStart":50,"spanEnd":64,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Michelle Obama |personnorthamerica"}
+{"spanStart":50,"spanEnd":64,"confidence":0.8,"documentId":"Test document","slot":"nell-ooccat","annotator":"cmunell_ooccat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Michelle Obama |female"}
+{"spanStart":0,"spanEnd":12,"confidence":0.9155569256388765,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"agent"}
+{"spanStart":0,"spanEnd":12,"confidence":0.9155569256388765,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"humanagent"}
+{"spanStart":0,"spanEnd":12,"confidence":0.8760388166289202,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"male"}
+{"spanStart":0,"spanEnd":12,"confidence":0.9155569256388765,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"person"}
+{"spanStart":0,"spanEnd":12,"confidence":0.8537312117161419,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"personbylocation"}
+{"spanStart":0,"spanEnd":12,"confidence":0.8537312117161419,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"personnorthamerica"}
+{"spanStart":0,"spanEnd":12,"confidence":0.8537312117161419,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"personus"}
+{"spanStart":0,"spanEnd":12,"confidence":0.9155569256388765,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"politician"}
+{"spanStart":0,"spanEnd":12,"confidence":0.6983204180315072,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"politicianus"}
+{"spanStart":30,"spanEnd":42,"confidence":0.9345002852779953,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"agent"}
+{"spanStart":30,"spanEnd":42,"confidence":0.9345002852779953,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"humanagent"}
+{"spanStart":30,"spanEnd":42,"confidence":0.8865488829136859,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"male"}
+{"spanStart":30,"spanEnd":42,"confidence":0.9345002852779953,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"person"}
+{"spanStart":30,"spanEnd":42,"confidence":0.8940695358434728,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"personbylocation"}
+{"spanStart":30,"spanEnd":42,"confidence":0.8940695358434728,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"personnorthamerica"}
+{"spanStart":30,"spanEnd":42,"confidence":0.8940695358434728,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"personus"}
+{"spanStart":30,"spanEnd":42,"confidence":0.9345002852779953,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"politician"}
+{"spanStart":30,"spanEnd":42,"confidence":0.7575155521263788,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"politicianus"}
+{"spanStart":50,"spanEnd":64,"confidence":0.824791943305082,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"agent"}
+{"spanStart":50,"spanEnd":64,"confidence":0.824791943305082,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"humanagent"}
+{"spanStart":50,"spanEnd":64,"confidence":0.6676762719495175,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"male"}
+{"spanStart":50,"spanEnd":64,"confidence":0.824791943305082,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"person"}
+{"spanStart":50,"spanEnd":64,"confidence":0.7493975192744913,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"personbylocation"}
+{"spanStart":50,"spanEnd":64,"confidence":0.7493975192744913,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"personnorthamerica"}
+{"spanStart":50,"spanEnd":64,"confidence":0.7493975192744913,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"personus"}
+{"spanStart":50,"spanEnd":64,"confidence":0.824791943305082,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"politician"}
+{"spanStart":50,"spanEnd":64,"confidence":0.6722827215251099,"documentId":"Test document","slot":"nell-cat","annotator":"cmunell_cat-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"politicianus"}
+{"spanStart":43,"spanEnd":49,"confidence":0.059731792171820675,"documentId":"Test document","slot":"nell-verb","annotator":"cmunell_verb-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Obama||persontellmale||Obama"}
+{"spanStart":43,"spanEnd":49,"confidence":0.0393003750052404,"documentId":"Test document","slot":"nell-verb","annotator":"cmunell_verb-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Obama||persontellhumanagent||Obama"}
+{"spanStart":43,"spanEnd":49,"confidence":0.09464922907906416,"documentId":"Test document","slot":"nell-verb","annotator":"cmunell_verb-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Obama||humanagentchaseperson||Obama"}
+{"spanStart":43,"spanEnd":49,"confidence":0.11711998575071934,"documentId":"Test document","slot":"nell-verb","annotator":"cmunell_verb-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Obama||personcallperson||Obama"}
+{"spanStart":43,"spanEnd":49,"confidence":0.06363334581111357,"documentId":"Test document","slot":"nell-verb","annotator":"cmunell_verb-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Obama||maletellperson||Obama"}
+{"spanStart":43,"spanEnd":49,"confidence":0.14609713233356592,"documentId":"Test document","slot":"nell-verb","annotator":"cmunell_verb-0.0.1","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Obama||humanagentlosehumanagent||Obama"}
+{"spanStart":0,"spanEnd":6,"documentId":"Test document","slot":"lemma","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack"}
+{"spanStart":7,"spanEnd":12,"documentId":"Test document","slot":"lemma","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Obama"}
+{"spanStart":13,"spanEnd":19,"documentId":"Test document","slot":"lemma","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"call"}
+{"spanStart":20,"spanEnd":23,"documentId":"Test document","slot":"lemma","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"he"}
+{"spanStart":24,"spanEnd":28,"documentId":"Test document","slot":"lemma","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"wife"}
+{"spanStart":28,"spanEnd":29,"documentId":"Test document","slot":"lemma","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"."}
+{"spanStart":30,"spanEnd":36,"documentId":"Test document","slot":"lemma","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack"}
+{"spanStart":37,"spanEnd":42,"documentId":"Test document","slot":"lemma","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Obama"}
+{"spanStart":43,"spanEnd":49,"documentId":"Test document","slot":"lemma","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"call"}
+{"spanStart":50,"spanEnd":58,"documentId":"Test document","slot":"lemma","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Michelle"}
+{"spanStart":59,"spanEnd":64,"documentId":"Test document","slot":"lemma","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Obama"}
+{"spanStart":64,"spanEnd":65,"documentId":"Test document","slot":"lemma","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"."}
+{"spanStart":0,"spanEnd":6,"documentId":"Test document","slot":"token","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"str":"Barack","s":0,"e":6}}
+{"spanStart":7,"spanEnd":12,"documentId":"Test document","slot":"token","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"str":"Obama","s":7,"e":12}}
+{"spanStart":13,"spanEnd":19,"documentId":"Test document","slot":"token","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"str":"called","s":13,"e":19}}
+{"spanStart":20,"spanEnd":23,"documentId":"Test document","slot":"token","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"str":"his","s":20,"e":23}}
+{"spanStart":24,"spanEnd":28,"documentId":"Test document","slot":"token","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"str":"wife","s":24,"e":28}}
+{"spanStart":28,"spanEnd":29,"documentId":"Test document","slot":"token","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"str":".","s":28,"e":29}}
+{"spanStart":30,"spanEnd":36,"documentId":"Test document","slot":"token","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"str":"Barack","s":30,"e":36}}
+{"spanStart":37,"spanEnd":42,"documentId":"Test document","slot":"token","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"str":"Obama","s":37,"e":42}}
+{"spanStart":43,"spanEnd":49,"documentId":"Test document","slot":"token","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"str":"called","s":43,"e":49}}
+{"spanStart":50,"spanEnd":58,"documentId":"Test document","slot":"token","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"str":"Michelle","s":50,"e":58}}
+{"spanStart":59,"spanEnd":64,"documentId":"Test document","slot":"token","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"str":"Obama","s":59,"e":64}}
+{"spanStart":64,"spanEnd":65,"documentId":"Test document","slot":"token","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"str":".","s":64,"e":65}}
+{"spanStart":0,"spanEnd":29,"documentId":"Test document","slot":"sentence","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama called his wife ."}
+{"spanStart":30,"spanEnd":65,"documentId":"Test document","slot":"sentence","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama called Michelle Obama ."}
+{"spanStart":0,"spanEnd":65,"documentId":"Test document","slot":"text","annotator":"","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"Barack Obama called his wife. Barack Obama called Michelle Obama."}
+{"spanStart":0,"spanEnd":6,"documentId":"Test document","slot":"pos","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"NNP"}
+{"spanStart":7,"spanEnd":12,"documentId":"Test document","slot":"pos","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"NNP"}
+{"spanStart":13,"spanEnd":19,"documentId":"Test document","slot":"pos","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"VBD"}
+{"spanStart":20,"spanEnd":23,"documentId":"Test document","slot":"pos","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"PRP$"}
+{"spanStart":24,"spanEnd":28,"documentId":"Test document","slot":"pos","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"NN"}
+{"spanStart":28,"spanEnd":29,"documentId":"Test document","slot":"pos","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"SYM"}
+{"spanStart":30,"spanEnd":36,"documentId":"Test document","slot":"pos","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"NNP"}
+{"spanStart":37,"spanEnd":42,"documentId":"Test document","slot":"pos","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"NNP"}
+{"spanStart":43,"spanEnd":49,"documentId":"Test document","slot":"pos","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"VBD"}
+{"spanStart":50,"spanEnd":58,"documentId":"Test document","slot":"pos","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"NNP"}
+{"spanStart":59,"spanEnd":64,"documentId":"Test document","slot":"pos","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"NNP"}
+{"spanStart":64,"spanEnd":65,"documentId":"Test document","slot":"pos","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"SYM"}
+{"spanStart":0,"spanEnd":29,"confidence":0,"documentId":"Test document","slot":"con-parse","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":" (ROOT  (S  (NP  (NNP Barack) (NNP Obama)) (VP  (VBD called) (NP  (PRP$ his) (NN wife))) (. .)))"}
+{"spanStart":30,"spanEnd":65,"confidence":0,"documentId":"Test document","slot":"con-parse","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":" (ROOT  (S  (NP  (NNP Barack) (NNP Obama)) (VP  (VBD called) (NP  (NNP Michelle) (NNP Obama))) (. .)))"}
+{"spanStart":0,"spanEnd":29,"documentId":"Test document","slot":"dep-parse","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"compound(Obama-2, Barack-1)\nnsubj(called-3, Obama-2)\nroot(ROOT-0, called-3)\nnmod:poss(wife-5, his-4)\ndobj(called-3, wife-5)\n"}
+{"spanStart":30,"spanEnd":65,"documentId":"Test document","slot":"dep-parse","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"compound(Obama-2, Barack-1)\nnsubj(called-3, Obama-2)\nroot(ROOT-0, called-3)\ncompound(Obama-5, Michelle-4)\ndobj(called-3, Obama-5)\n"}
+{"spanStart":0,"spanEnd":12,"documentId":"Test document","slot":"ner","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"PERSON"}
+{"spanStart":13,"spanEnd":19,"documentId":"Test document","slot":"ner","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"O"}
+{"spanStart":30,"spanEnd":42,"documentId":"Test document","slot":"ner","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"PERSON"}
+{"spanStart":43,"spanEnd":49,"documentId":"Test document","slot":"ner","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"O"}
+{"spanStart":50,"spanEnd":64,"documentId":"Test document","slot":"ner","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"PERSON"}
+{"spanStart":64,"spanEnd":65,"documentId":"Test document","slot":"ner","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":"O"}
+{"spanStart":0,"spanEnd":12,"documentId":"Test document","slot":"coref","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"spans":[{"s":0,"e":2,"sI":0},{"s":0,"e":2,"sI":1},{"s":3,"e":4,"sI":0}],"id":1,"rep":{"s":0,"e":2,"sI":0}}}
+{"spanStart":20,"spanEnd":23,"documentId":"Test document","slot":"coref","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"spans":[{"s":0,"e":2,"sI":0},{"s":0,"e":2,"sI":1},{"s":3,"e":4,"sI":0}],"id":1,"rep":{"s":0,"e":2,"sI":0}}}
+{"spanStart":20,"spanEnd":28,"documentId":"Test document","slot":"coref","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"spans":[{"s":3,"e":5,"sI":0}],"id":2,"rep":{"s":3,"e":5,"sI":0}}}
+{"spanStart":30,"spanEnd":42,"documentId":"Test document","slot":"coref","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"spans":[{"s":0,"e":2,"sI":0},{"s":0,"e":2,"sI":1},{"s":3,"e":4,"sI":0}],"id":1,"rep":{"s":0,"e":2,"sI":0}}}
+{"spanStart":50,"spanEnd":64,"documentId":"Test document","slot":"coref","annotator":"stanford_3.5.2","annotationTime":"2016-02-17T17:21:55.437-05:00","value":{"spans":[{"s":3,"e":5,"sI":1}],"id":5,"rep":{"s":3,"e":5,"sI":1}}}
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3:21.191s
+[INFO] Finished at: Wed Feb 17 17:21:55 EST 2016
+[INFO] Final Memory: 745M/14345M
+[INFO] ------------------------------------------------------------------------

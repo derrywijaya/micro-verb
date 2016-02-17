@@ -57,7 +57,6 @@ prior	concept:professionuseacademicfield	0.0029073487601374397
 prior	concept:jobpositionfocusonacademicfield	7.749011382234806E-5
 prior	concept:jobpositionbaseacademicfield	1.1753171771294238E-5
 prior	concept:jobpositionnotifyinacademicfield	8.832522031970683E-6
-prior	concept:jobpositionuseacademicfield	2.617196820457806E-4
 prior	concept:jobpositionaskacademicfield	3.462748319761298E-5
 prior	concept:jobpositiontakeacademicfield	1.330559887472515E-4
 prior	concept:jobpositionmanageacademicfield	4.155462662581184E-5
@@ -312,7 +311,7 @@ prior	concept:personlosemale	1.1633018969258276E-4
 prior	concept:personhaveformale	1.3070393234831387E-5
 prior	concept:personrealizemale	7.991099353540696E-6
 prior	concept:personcallformale	9.886840060298945E-6
-prior	concept:personpassive::accesscompany	0.003991231075669333
+prior	concept:personbeaccesscompany	0.003991231075669333
 prior	concept:clothingbuyclothing	9.534868000875706E-5
 prior	concept:clothingdonclothing	3.577766998374376E-5
 prior	concept:clothingincludeclothing	3.0805997190209777E-4
@@ -343,7 +342,6 @@ prior	concept:organizationbreakcity	2.2274501946353474E-5
 prior	concept:organizationtakecity	3.141330551443742E-4
 prior	concept:organizationmeetincity	6.531747617432016E-5
 prior	concept:organizationaddcity	4.631748058155831E-5
-prior	concept:organizationplayincity	2.1035640618914396E-5
 prior	concept:organizationliveincity	3.2153623065733E-5
 prior	concept:organizationholdcity	5.2422293058689146E-5
 prior	concept:organizationannouncecity	3.404899898345043E-5
@@ -438,7 +436,7 @@ prior	concept:bookrequireprogramminglanguage	5.095640962456164E-5
 prior	concept:bookseeprogramminglanguage	7.637241766905108E-5
 prior	concept:bookdependonprogramminglanguage	8.924348197145666E-6
 prior	concept:geopoliticalorganizationreducebyphysicsterm	1.123498305007094E-5
-prior	concept:geopoliticalorganizationpassive::considerphysicsterm	3.060254506128999E-4
+prior	concept:geopoliticalorganizationbeconsiderphysicsterm	3.060254506128999E-4
 prior	concept:geopoliticalorganizationstartatphysicsterm	2.4103688257294462E-5
 prior	concept:geopoliticalorganizationcomeunderphysicsterm	9.118021048188128E-6
 prior	concept:geopoliticalorganizationapprovephysicsterm	4.491050392712051E-5
@@ -499,8 +497,8 @@ prior	concept:geopoliticallocationbecomeinyear	4.0493396405479405E-5
 prior	concept:geopoliticallocationexperienceinyear	1.1804157205038411E-5
 prior	concept:geopoliticallocationopeninyear	1.905973842153866E-4
 prior	concept:geopoliticallocationlaunchinyear	1.2949294720236225E-5
-prior	concept:geopoliticallocationpassive::foundinyear	4.714038631839686E-5
-prior	concept:mldatasetpassive::accesscompany	5.929626282282295E-4
+prior	concept:geopoliticallocationbefoundinyear	4.714038631839686E-5
+prior	concept:mldatasetbeaccesscompany	5.929626282282295E-4
 prior	concept:mldatasetcontaincompany	2.4270810708162423E-4
 prior	concept:mldatasetspendcompany	2.9994637037855617E-5
 prior	concept:mldatasetaddcompany	2.1330904574119762E-5
@@ -569,7 +567,7 @@ prior	concept:cityforecloseroom	1.368129005230431E-5
 prior	concept:booktakecompany	3.4110999295665513E-4
 prior	concept:booktuneforcompany	3.11917740040424E-5
 prior	concept:booklistcompany	4.2098811018177995E-4
-prior	concept:bookpassive::accesscompany	6.025391304894401E-4
+prior	concept:bookbeaccesscompany	6.025391304894401E-4
 prior	concept:bookpostoncompany	8.994121395713026E-5
 prior	concept:booklovecompany	1.269642696389569E-4
 prior	concept:companyoffertransportation	3.1723557648957723E-4
@@ -734,7 +732,7 @@ prior	concept:visualizablethingconstitutephysicalaction	0.023738345371479373
 prior	concept:visualizablethingreducephysicalaction	1.1711948523508962E-5
 prior	concept:visualizablethingchangephysicalaction	1.2533617961424038E-5
 prior	concept:visualizablethingmakephysicalaction	6.054752314597727E-5
-prior	concept:buildingfeaturepassive::accesscompany	5.985391175916332E-4
+prior	concept:buildingfeaturebeaccesscompany	5.985391175916332E-4
 prior	concept:buildingfeatureincludecompany	4.963906601252317E-4
 prior	concept:buildingfeatureearncompany	1.8702676560853487E-4
 prior	concept:personwriteforblog	2.6348850944216708E-5
@@ -857,7 +855,7 @@ prior	concept:companyfileforcompany	6.40479711311454E-5
 prior	concept:companywritecompany	9.993259745959363E-5
 prior	concept:companyworkwithcompany	1.1074096015317951E-4
 prior	concept:companybuycompany	4.0103771568887126E-4
-prior	concept:companypassive::viewcompany	1.640275743725214E-5
+prior	concept:companybeviewcompany	1.640275743725214E-5
 prior	concept:companyannouncecompany	2.0582394658443323E-4
 prior	concept:companyacquirefromcompany	3.5354576352253006E-4
 prior	concept:companyaddcompany	5.524827937080689E-4
@@ -906,8 +904,8 @@ prior	concept:programminglanguagecreatevehicle	2.1400765862257884E-5
 prior	concept:programminglanguageseevehicle	1.1762187543915463E-4
 prior	concept:programminglanguagesellvehicle	5.458521057627681E-6
 prior	concept:cityserveascompany	4.410908998882008E-5
-prior	concept:citypassive::viewcompany	1.6498190179220516E-5
-prior	concept:citypassive::accesscompany	6.210387575702084E-4
+prior	concept:citybeviewcompany	1.6498190179220516E-5
+prior	concept:citybeaccesscompany	6.210387575702084E-4
 prior	concept:cityputoncompany	3.8477097503657886E-4
 prior	concept:citytellcompany	0.001370927332312525
 prior	concept:organizationknowperson	2.6252200547427154E-5
@@ -941,7 +939,7 @@ prior	concept:weatherphenomenonoccuratplant	4.78798394729264E-6
 prior	concept:humanagentreceivefromcompany	5.7107876160111606E-5
 prior	concept:humanagentseecompany	0.0012933190892392957
 prior	concept:humanagentwritecompany	2.610868688441148E-4
-prior	concept:humanagentpassive::accesscompany	5.867541638639662E-4
+prior	concept:humanagentbeaccesscompany	5.867541638639662E-4
 prior	concept:programminglanguagelieinemotion	6.71324175880165E-5
 prior	concept:programminglanguagelookforemotion	7.196315949126535E-4
 prior	concept:programminglanguagecauseemotion	2.8085621671645517E-5
@@ -990,7 +988,7 @@ prior	concept:humanagentcausedisease	2.7602366348738076E-5
 prior	concept:humanagentdieofdisease	1.692329100664368E-4
 prior	concept:humanagentpreventdisease	1.3742094149961858E-5
 prior	concept:humanagentdiagnosedisease	8.752600124329685E-5
-prior	concept:humanagentpassive::diagnosewithdisease	1.3425934241638948E-5
+prior	concept:humanagentbediagnosewithdisease	1.3425934241638948E-5
 prior	concept:humanagentdevelopdisease	5.4304947298871216E-5
 prior	concept:humanagentreducedisease	1.1261930845982865E-5
 prior	concept:datedieatphysicsterm	6.427669370336689E-5
@@ -1024,7 +1022,6 @@ prior	concept:jobpositionadjournatphysicsterm	2.5642449193335492E-6
 prior	concept:jobpositionincreasebyphysicsterm	1.3751609348794795E-5
 prior	concept:personholdperson	1.065564462722884E-4
 prior	concept:personplayperson	2.5378589292841423E-4
-prior	concept:personbecomeperson	2.9649716341555486E-4
 prior	concept:persondefeatperson	1.614321812938276E-4
 prior	concept:personanswerperson	2.96346788156183E-5
 prior	concept:personreplaceperson	7.070031080682828E-5
@@ -1235,7 +1232,6 @@ prior	concept:citygiveprogramminglanguage	9.167966709241245E-5
 prior	concept:websiteopeninhallwayitem	1.3931699006045813E-4
 prior	concept:websitemakehallwayitem	4.6012620934174466E-5
 prior	concept:websiteprovidehallwayitem	6.899463485483629E-5
-prior	concept:websiteopenhallwayitem	3.418961601277991E-5
 prior	concept:websitevarybyhallwayitem	1.3189394982541061E-5
 prior	concept:websitesupporthallwayitem	5.0634616005291335E-5
 prior	concept:websiteincludehallwayitem	6.523082663374581E-5
@@ -1322,7 +1318,6 @@ prior	concept:governmentorganizationseekprofession	1.123006257791177E-4
 prior	concept:companycontrolbuildingfeature	1.2520277067325407E-4
 prior	concept:companyprovidebuildingfeature	0.0012402733985348343
 prior	concept:companyhelpbuildingfeature	1.8746047990169827E-4
-prior	concept:companyopenbuildingfeature	1.9588325006508197E-4
 prior	concept:geopoliticalorganizationincludeprogramminglanguage	3.6679655300410395E-4
 prior	concept:geopoliticalorganizationinviteprogramminglanguage	4.6175842502852154E-4
 prior	concept:organizationservebook	3.384358156857853E-5
@@ -1483,7 +1478,6 @@ prior	concept:cityopeninhallwayitem	9.169463276522588E-5
 prior	concept:citysitonhallwayitem	4.8980389334065504E-6
 prior	concept:cityreporthallwayitem	6.757649060778462E-6
 prior	concept:cityprovidehallwayitem	1.2904446069446555E-4
-prior	concept:cityopenhallwayitem	4.76120230981068E-5
 prior	concept:cityusehallwayitem	5.749498768812383E-5
 prior	concept:cityviewhallwayitem	7.232258233920904E-5
 prior	concept:citylayhallwayitem	4.021161200056005E-5
@@ -1515,7 +1509,7 @@ prior	concept:cityconsistofparlourgame	6.956123520502616E-5
 prior	concept:citylastparlourgame	2.2024379322503483E-5
 prior	concept:citytakeparlourgame	4.0761818330204856E-4
 prior	concept:cityrangefromparlourgame	1.4929149934034647E-5
-prior	concept:professionpassive::holdontelevisionshow	2.3825161530455874E-5
+prior	concept:professionbeholdontelevisionshow	2.3825161530455874E-5
 prior	concept:professionbeginontelevisionshow	8.589984805790424E-6
 prior	concept:professiontelltelevisionshow	2.4736640885159847E-5
 prior	concept:professionposttelevisionshow	3.5058419277766005E-5
@@ -1609,7 +1603,6 @@ prior	concept:buildingfeaturegenerateinphysicsterm	9.112693110346024E-6
 prior	concept:buildingfeaturelosephysicsterm	2.8305998700309088E-5
 prior	concept:persontakepoliticaloffice	8.211720757588855E-5
 prior	concept:personserveaspoliticaloffice	4.8525797038421125E-4
-prior	concept:personbecomepoliticaloffice	3.0777321048815E-4
 prior	concept:personresignaspoliticaloffice	2.5387821761392077E-5
 prior	concept:personappointpoliticaloffice	6.306025832171264E-5
 prior	concept:personaskpoliticaloffice	4.18206971642396E-5
@@ -1625,7 +1618,6 @@ prior	concept:personserveonbuildingfeature	3.240816280933854E-5
 prior	concept:personwriteinbuildingfeature	6.0495450796007E-4
 prior	concept:persongetbuildingfeature	1.7833663255779292E-4
 prior	concept:personlookforbuildingfeature	3.885265304475325E-5
-prior	concept:personopenbuildingfeature	3.3232701532435213E-4
 prior	concept:personturnbuildingfeature	1.938653694113777E-5
 prior	concept:companyexpressemotion	4.3048601203935383E-4
 prior	concept:companyassumeemotion	2.1537992062458834E-4
@@ -1665,7 +1657,7 @@ prior	concept:personteachphysicalcharacteristic	1.0866980862572203E-5
 prior	concept:personbuyphysicalcharacteristic	2.810088358765759E-5
 prior	concept:persondiscussphysicalcharacteristic	8.502313508875251E-5
 prior	concept:humanagentmoveinyear	3.091197268400579E-4
-prior	concept:humanagentpassive::bearinyear	2.2491763622407998E-5
+prior	concept:humanagentbebearinyear	2.2491763622407998E-5
 prior	concept:humanagentopeninyear	1.999337895670205E-4
 prior	concept:humanagentdieinyear	8.749371199577161E-4
 prior	concept:bookmakegeometricshape	5.453542758533656E-4
@@ -1961,7 +1953,6 @@ prior	concept:academicfielduseprogramminglanguage	2.535654720873376E-4
 prior	concept:magazinesearchwebsite	6.876845102161412E-4
 prior	concept:magazineusewebsite	0.0019058845251721623
 prior	concept:persontakesport	1.2408544669319078E-4
-prior	concept:personplaysport	6.585258035338265E-5
 prior	concept:persongosport	1.867217147675868E-4
 prior	concept:personleadsport	3.686052703908173E-5
 prior	concept:personhaveinsport	1.6251564107230258E-5
@@ -2053,8 +2044,6 @@ prior	concept:musicsongcollectmusicalbum	1.176587739932317E-4
 prior	concept:malestartcompany	1.7043123225365647E-5
 prior	concept:malelovecompany	7.601884510991517E-5
 prior	concept:malesayincompany	1.8095378130644057E-5
-prior	concept:maleworkforcompany	1.0948952892390298E-5
-prior	concept:maleleadcompany	2.5889225681850756E-5
 prior	concept:malesetcompany	4.680642166891094E-5
 prior	concept:malegivecompany	4.9209295748567186E-5
 prior	concept:malewriteoncompany	1.650710086485884E-5
@@ -2064,11 +2053,10 @@ prior	concept:roomtuneforcompany	3.033412067040269E-5
 prior	concept:roomappearincompany	9.13253771262131E-6
 prior	concept:roomincludecompany	1.0832170849019596E-4
 prior	concept:companyexpandpublication	2.1228870101610103E-5
-prior	concept:companypassive::viewpublication	1.4666897855622693E-5
+prior	concept:companybeviewpublication	1.4666897855622693E-5
 prior	concept:companysendpublication	3.0549330411307803E-4
 prior	concept:companyofferpublication	4.106668281072736E-4
-prior	concept:companypassive::accesspublication	1.0174341884660852E-5
-prior	concept:personopenhallwayitem	2.294941812196928E-4
+prior	concept:companybeaccesspublication	1.0174341884660852E-5
 prior	concept:persontakehallwayitem	1.387211882019691E-4
 prior	concept:personmakehallwayitem	1.353541924008969E-4
 prior	concept:persondenyhallwayitem	1.130026075598311E-5
@@ -2084,7 +2072,6 @@ prior	concept:maletellperson	2.356988486385537E-4
 prior	concept:malemeetperson	3.781815902808677E-5
 prior	concept:maleappointperson	6.446006556386184E-5
 prior	concept:malesignperson	1.3254931803499955E-5
-prior	concept:malebecomeperson	5.980280292843541E-5
 prior	concept:malecongratulateperson	7.633349116268518E-5
 prior	concept:geopoliticalorganizationincludegeopoliticalorganization	1.1645695596489237E-4
 prior	concept:geopoliticalorganizationapprovegeopoliticalorganization	2.2714670517896584E-5
@@ -2165,7 +2152,7 @@ prior	concept:governmentorganizationreadmusicalbum	1.6800973079109272E-5
 prior	concept:governmentorganizationfollowmusicalbum	2.0859606726749887E-5
 prior	concept:governmentorganizationprovideformusicalbum	7.312449328140912E-6
 prior	concept:governmentorganizationmakemusicalbum	6.086939246807844E-5
-prior	concept:websitepassive::accesscompany	6.086137390967345E-4
+prior	concept:websitebeaccesscompany	6.086137390967345E-4
 prior	concept:websitesupportcompany	6.865619470143038E-5
 prior	concept:websitebuycompany	5.809516785978055E-5
 prior	concept:websiteputoncompany	6.148230143705573E-4
@@ -2510,7 +2497,7 @@ prior	concept:plantproduceplant	4.000739097123576E-5
 prior	concept:plantincludeplant	1.871346161660712E-4
 prior	concept:plantsendplant	7.164557320611548E-5
 prior	concept:plantdependonplant	1.763632905016328E-5
-prior	concept:humanagentpassive::accesspublication	5.828499732365157E-4
+prior	concept:humanagentbeaccesspublication	5.828499732365157E-4
 prior	concept:humanagentmeetpublication	6.608890034272779E-5
 prior	concept:humanagentcomepublication	1.2198895759207251E-5
 prior	concept:humanagenttellpublication	1.886810885266172E-4
@@ -2622,7 +2609,7 @@ prior	concept:magazinetakegeometricshape	0.001196945838585634
 prior	concept:humanagentholdgeometricshape	3.4313185249242366E-5
 prior	concept:humanagentmakegeometricshape	6.541334131415786E-4
 prior	concept:humanagentdescribegeometricshape	3.3538952717198945E-5
-prior	concept:datepassive::accesscompany	6.031642460307285E-4
+prior	concept:datebeaccesscompany	6.031642460307285E-4
 prior	concept:datepostincompany	1.423092802298782E-4
 prior	concept:dateruncompany	5.6022312661629904E-5
 prior	concept:dateaddcompany	2.061320208061458E-5
@@ -2645,7 +2632,6 @@ prior	concept:physicstermgetphysicalaction	7.61649638763832E-4
 prior	concept:physicstermaskphysicalaction	3.439629332394065E-5
 prior	concept:physicstermreceivephysicalaction	5.325539432762297E-5
 prior	concept:websiteusebuildingfeature	7.115250877349726E-4
-prior	concept:websiteopenbuildingfeature	1.1703890117468725E-4
 prior	concept:websitesupportbuildingfeature	1.635004346862679E-4
 prior	concept:websitepaybuildingfeature	1.3344122497996059E-5
 prior	concept:websiteallowbuildingfeature	3.946794040677331E-5
@@ -2849,7 +2835,6 @@ prior	concept:actorplayperson	2.2050165695765143E-4
 prior	concept:actorrunforperson	2.2780191435249392E-5
 prior	concept:actordefeatperson	3.8267501226789794E-5
 prior	concept:actorstarperson	9.058337908066732E-6
-prior	concept:actormarryperson	1.0732512795920034E-5
 prior	concept:actortellperson	2.1577011061560555E-4
 prior	concept:personfallinemotion	5.085826741464284E-4
 prior	concept:personsufferfromemotion	2.5770556942090766E-5
@@ -2916,7 +2901,7 @@ prior	concept:websiteairondate	1.5336320233814705E-4
 prior	concept:websitereportondate	3.916520477897363E-4
 prior	concept:websitesayondate	2.366843359266701E-5
 prior	concept:websitecontinueindate	1.3317211802075617E-5
-prior	concept:personpassive::accesspublication	5.752156332806585E-4
+prior	concept:personbeaccesspublication	5.752156332806585E-4
 prior	concept:persongetpublication	6.111556084987541E-5
 prior	concept:personwriteinpublication	5.988190931322373E-5
 prior	concept:persontellpublication	5.319851853532618E-4
@@ -3015,7 +3000,6 @@ prior	concept:stateorprovincecheckcompany	3.94597125936235E-5
 prior	concept:stateorprovincecommentoncompany	2.4590206642166157E-5
 prior	concept:stateorprovinceviewcompany	5.462667276924697E-6
 prior	concept:stateorprovinceincludecompany	3.1649312363037237E-4
-prior	concept:stateorprovincejoincompany	9.99403330669558E-6
 prior	concept:companypublishondate	4.115681823650792E-4
 prior	concept:companyreleasefordate	6.455891689111918E-5
 prior	concept:companybeginindate	0.001584601691760202
@@ -3142,7 +3126,6 @@ prior	concept:physicalactionincludeprofession	1.2865488497285467E-4
 prior	concept:physicalactionaskprofession	3.230862302497228E-5
 prior	concept:physicalactiongiveprofession	2.71962994084658E-4
 prior	concept:physicstermkeepbook	0.0013229642824104826
-prior	concept:personleadsportsteam	1.0534057098394906E-4
 prior	concept:personreceivefromsportsteam	0.0012282525724614255
 prior	concept:personbeatsportsteam	2.532952149231753E-5
 prior	concept:physicalactionrequireemotion	7.866976348591993E-5
@@ -3337,7 +3320,6 @@ prior	concept:academicfieldmakegeometricshape	3.6084649299880303E-4
 prior	concept:academicfieldbeofgeometricshape	1.844017272704232E-5
 prior	concept:academicfielddependongeometricshape	1.6647155063301946E-5
 prior	concept:drugincreaseindisease	1.4949719714234909E-5
-prior	concept:drugcausedisease	0.001778170536479395
 prior	concept:druggetdisease	2.2744256830738643E-4
 prior	concept:drugpreventdisease	2.0320806378696814E-4
 prior	concept:drugpromotedisease	2.0740787252308886E-5
@@ -3466,7 +3448,6 @@ prior	concept:emotiontakecity	4.680312069600856E-4
 prior	concept:professionmakevisualizablething	8.152514067672109E-4
 prior	concept:professionapplyforvisualizablething	1.392435769927144E-5
 prior	concept:professionstandinvisualizablething	1.9834748445743556E-5
-prior	concept:professionusevisualizablething	8.399691924747104E-5
 prior	concept:datepassbook	1.1275385426627713E-5
 prior	concept:datefileunderbook	7.583502293925993E-5
 prior	concept:datesawbook	1.2467358565244308E-4
@@ -3570,7 +3551,6 @@ prior	concept:bodypartcausebodypart	2.16526348527759E-5
 prior	concept:bodyparttouchbodypart	1.0572004435823171E-4
 prior	concept:bodypartenterbodypart	6.769802086296605E-5
 prior	concept:bodypartremovefrombodypart	9.23037327178584E-6
-prior	concept:bodypartcontainbodypart	8.632835024690249E-5
 prior	concept:bodypartconnectbodypart	1.418111695123871E-5
 prior	concept:bodypartaffectbodypart	1.9585065722884884E-5
 prior	concept:bodypartcontrolbodypart	1.5415877682083103E-5
@@ -3699,7 +3679,7 @@ prior	concept:organizationcomeunderphysicsterm	1.1455859417162718E-5
 prior	concept:organizationlosephysicsterm	7.401691012342212E-4
 prior	concept:organizationgrowatphysicsterm	1.0685257396596586E-5
 prior	concept:persondieinyear	0.005529972154713061
-prior	concept:personpassive::electinyear	3.1037446983647125E-5
+prior	concept:personbeelectinyear	3.1037446983647125E-5
 prior	concept:personemigrateinyear	2.358249586093796E-5
 prior	concept:chemicalformeventoutcome	1.4578632054527303E-5
 prior	concept:chemicalmakeeventoutcome	2.7237347705438362E-5
@@ -3733,7 +3713,6 @@ prior	concept:personwinautomobilemaker	3.344690308430979E-5
 prior	concept:personwriteautomobilemaker	3.324112823913087E-5
 prior	concept:cityopeninbuildingfeature	6.4363815075139E-5
 prior	concept:citypaybuildingfeature	1.2657768045357327E-5
-prior	concept:cityopenbuildingfeature	1.3731524641601687E-4
 prior	concept:cityretainbuildingfeature	1.8525801902635992E-5
 prior	concept:citybasebuildingfeature	1.2444052253577038E-5
 prior	concept:cityusebuildingfeature	7.20252605568006E-4
@@ -3870,10 +3849,9 @@ prior	concept:cityacceptgeopoliticallocation	2.3991505616213206E-5
 prior	concept:cityshowgeopoliticallocation	2.547036144229991E-4
 prior	concept:citynamegeopoliticallocation	1.1564864527401942E-5
 prior	concept:citybecomegeopoliticallocation	5.5882631400044544E-5
-prior	concept:citypassive::callgeopoliticallocation	7.514987115950383E-6
+prior	concept:citybecallgeopoliticallocation	7.514987115950383E-6
 prior	concept:cityadvisegeopoliticallocation	2.2873918405045176E-5
 prior	concept:citybeatgeopoliticallocation	1.188850168567532E-5
-prior	concept:cityjoingeopoliticallocation	1.0372657512495714E-4
 prior	concept:citybeongeopoliticallocation	1.8930419594231874E-5
 prior	concept:jobpositionanswerperson	1.0540122381814808E-5
 prior	concept:jobpositiontellperson	1.4535392190622205E-4
@@ -3950,7 +3928,7 @@ prior	concept:bookhangonbuildingfeature	7.494470788773492E-6
 prior	concept:bookprotectbuildingfeature	2.6366049430875725E-5
 prior	concept:bookusebuildingfeature	2.8501125232732185E-4
 prior	concept:bookfindbuildingfeature	3.5981819210716326E-5
-prior	concept:eventoutcomepassive::takeintoacademicfield	1.996845434382377E-5
+prior	concept:eventoutcomebetakeintoacademicfield	1.996845434382377E-5
 prior	concept:eventoutcomedependonacademicfield	1.2932493864107507E-4
 prior	concept:eventoutcomecomefromacademicfield	1.3021282495085878E-5
 prior	concept:eventoutcomeincludeacademicfield	4.31669561427918E-4
@@ -4170,7 +4148,7 @@ prior	concept:companyofferinstateorprovince	1.690270473419788E-5
 prior	concept:companytellstateorprovince	3.735281852297102E-5
 prior	concept:companyliveinstateorprovince	1.3646652393373759E-5
 prior	concept:professionfeelcurrency	5.024465286857026E-4
-prior	concept:professionpassive::quoteincurrency	8.131355196059028E-6
+prior	concept:professionbequoteincurrency	8.131355196059028E-6
 prior	concept:professionbuyincurrency	2.103453999868957E-5
 prior	concept:professionreceivecurrency	6.584930144227672E-5
 prior	concept:personsayinradiostation	7.77275002340916E-6
@@ -4187,7 +4165,6 @@ prior	concept:chemicalbuychemical	6.161801547682695E-5
 prior	concept:chemicalincludechemical	3.053417402706903E-4
 prior	concept:chemicalpreventchemical	8.905252521316891E-6
 prior	concept:chemicalactaschemical	1.6075416739726774E-5
-prior	concept:chemicalproducechemical	6.629002383985459E-5
 prior	concept:chemicalreducechemical	2.86979831288268E-5
 prior	concept:chemicalturnintochemical	1.8447912045859356E-5
 prior	concept:websiteaddperson	5.9589047417511156E-5
@@ -4220,7 +4197,7 @@ prior	concept:locationoffercity	1.6519498589502587E-4
 prior	concept:locationbeincity	1.5338889401735174E-5
 prior	concept:locationtakecity	1.2507198331841292E-4
 prior	concept:musicalbumpostoncompany	3.173125310091697E-5
-prior	concept:musicalbumpassive::viewcompany	1.3896606947832444E-5
+prior	concept:musicalbumbeviewcompany	1.3896606947832444E-5
 prior	concept:musicalbumtakecompany	4.06614079660191E-4
 prior	concept:musicalbumreadcompany	4.1443042441726934E-5
 prior	concept:geopoliticalorganizationmakewebsite	5.624046652409165E-4
@@ -4348,8 +4325,8 @@ prior	concept:companyannouncesportsgame	7.368132144935639E-5
 prior	concept:companyhaveforsportsgame	2.975393766356857E-4
 prior	concept:persontakeformagazine	1.8930251566999823E-5
 prior	concept:persontellmagazine	0.00157739911794545
-prior	concept:citypassive::viewpublication	1.5007939466824868E-5
-prior	concept:citypassive::accesspublication	5.852954249086551E-4
+prior	concept:citybeviewpublication	1.5007939466824868E-5
+prior	concept:citybeaccesspublication	5.852954249086551E-4
 prior	concept:cityhelppublication	7.967769341756844E-5
 prior	concept:citytellpublication	2.821890773902211E-4
 prior	concept:jobpositionenterroom	1.8828291716195344E-4
@@ -4454,7 +4431,7 @@ prior	concept:sportsteamtakesportsteam	1.1591716373066886E-4
 prior	concept:sportsteamplaysportsteam	9.340329784986333E-5
 prior	concept:sportsteamattendsportsteam	9.719353868285985E-6
 prior	concept:personusstartcompany	6.052517367692567E-6
-prior	concept:personuspassive::accesscompany	5.919224612543196E-4
+prior	concept:personusbeaccesscompany	5.919224612543196E-4
 prior	concept:personusraisecompany	3.108977092652313E-5
 prior	concept:personusleafcompany	1.6369393242775073E-5
 prior	concept:personusprovidecompany	4.0697338841396625E-5

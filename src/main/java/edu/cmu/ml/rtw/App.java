@@ -16,6 +16,7 @@ import edu.cmu.ml.rtw.generic.data.annotation.nlp.SerializerDocumentNLPMicro;
 //import edu.cmu.ml.rtw.generic.util.Triple;
 //import edu.cmu.ml.rtw.micro.cat.data.CatDataTools;
 import edu.cmu.ml.rtw.micro.cat.data.annotation.nlp.NELLMentionCategorizer;
+import edu.cmu.ml.rtw.contextless.ContextlessNPCategorizer;
 
 /**
  * Hello world!
@@ -29,13 +30,14 @@ public class App
         PipelineNLPStanford pipelineStanford = new PipelineNLPStanford(30);
         PipelineNLPExtendable pipelineExtendable = new PipelineNLPExtendable();
         pipelineExtendable.extend(new NELLMentionCategorizer());
+        pipelineExtendable.extend(new ContextlessNPCategorizer());
         pipelineExtendable.extend(new AnnotationVerb());
         PipelineNLP pipeline = pipelineStanford.weld(pipelineExtendable);
         DataTools dataTools = new DataTools();
         dataTools.addAnnotationTypeNLP(AnnotationVerb.NELL_VERB);
         DocumentNLPMutable document = new DocumentNLPInMemory(dataTools, 
           "Test document", 
-          "Barack Obama was born in Pittsburgh in 2000.");
+          "Barack Obama called his wife. Barack Obama called Michelle Obama.");
         pipeline.run(document);
         SerializerDocumentNLPMicro microSerial = new SerializerDocumentNLPMicro(dataTools);
         List<Annotation> annotations = microSerial.serialize(document).getAllAnnotations();
