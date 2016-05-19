@@ -14,12 +14,19 @@
        </configuration>
      </plugin>
    </plugins>
+	<extensions>
+	  <extension>
+        <groupId>org.apache.maven.wagon</groupId>
+        <artifactId>wagon-webdav</artifactId>
+        <version>1.0-beta-2</version>
+	  </extension>
+	</extensions>
  </build>
  <dependencies>
    <dependency>
      <groupId>edu.cmu.ml.rtw</groupId>
      <artifactId>micro-util</artifactId>
-     <version>0.0.2-SNAPSHOT</version>
+     <version>0.0.4</version>
    </dependency>
    <dependency>
      <groupId>junit</groupId>
@@ -29,53 +36,58 @@
    <dependency>
      <groupId>edu.cmu.ml.rtw</groupId>
      <artifactId>micro-cat</artifactId>
-     <version>0.0.1-SNAPSHOT</version>
+     <version>0.0.4</version>
    </dependency>
    <dependency>
      <groupId>edu.cmu.ml.rtw</groupId>
      <artifactId>micro-ooccat</artifactId>
-     <version>0.0.1-SNAPSHOT</version>
+     <version>0.0.1</version>
    </dependency>
  </dependencies>
- <repositories>      
-   <repository>
-     <snapshots>
-       <enabled>false</enabled>
-     </snapshots>
-     <id>rtw-libs</id>
-     <name>rtw-libs-releases</name>
-     <url>http://rtw.ml.cmu.edu:8081/artifactory/libs-release-local</url>
-   </repository>
-   <repository>
-     <snapshots>
-       <enabled>false</enabled>
-     </snapshots>
-     <id>rtw-ext</id>
-     <name>rtw-ext-releases</name>
-     <url>http://rtw.ml.cmu.edu:8081/artifactory/ext-release-local</url>
-   </repository>
-   <repository>
-     <snapshots>
-       <enabled>true</enabled>
-     </snapshots>
-     <id>rtw-libs-snapshot</id>
-     <name>rtw-libs-snapshot</name>
-     <url>http://rtw.ml.cmu.edu:8081/artifactory/libs-snapshot-local</url>
-   </repository>
-   <repository>
-     <snapshots>
-       <enabled>true</enabled>
-     </snapshots>
-     <id>rtw-ext-snapshot</id>
-     <name>rtw-ext-snapshot</name>
-     <url>http://rtw.ml.cmu.edu:8081/artifactory/ext-snapshot-local</url>
-   </repository>
- </repositories>
- <distributionManagement>
- 	<repository>
-     <id>rtw-libs-snapshot</id>
-     <name>rtw-libs-snapshot</name>
-     <url>http://rtw.ml.cmu.edu:8081/artifactory/libs-snapshot-local</url>
-   </repository>
- </distributionManagement>
+  <repositories>      
+  	<repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>rtw-libs</id>
+      <name>rtw-libs-releases</name>
+      <url>http://rtw.ml.cmu.edu:8081/artifactory/libs-release-local</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>rtw-ext</id>
+      <name>rtw-ext-releases</name>
+      <url>http://rtw.ml.cmu.edu:8081/artifactory/ext-release-local</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>rtw-libs-snapshot</id>
+      <name>rtw-libs-snapshot</name>
+      <url>http://rtw.ml.cmu.edu:8081/artifactory/libs-snapshot-local</url>
+    </repository>
+    <repository>
+      <snapshots>
+        <enabled>true</enabled>
+      </snapshots>
+      <id>rtw-ext-snapshot</id>
+      <name>rtw-ext-snapshot</name>
+      <url>http://rtw.ml.cmu.edu:8081/artifactory/ext-snapshot-local</url>
+    </repository>
+  </repositories>
+  <distributionManagement>
+    <snapshotRepository>
+      <id>rtw-libs-snapshot</id>
+      <name>rtw-libs-snapshot</name>
+      <url>dav:http://rtw.ml.cmu.edu:8081/artifactory/libs-snapshot-local</url>
+    </snapshotRepository>
+    <repository>
+      <id>rtw-libs</id>
+      <name>rtw-libs-releases</name>
+      <url>dav:http://rtw.ml.cmu.edu:8081/artifactory/libs-release-local</url>
+    </repository>
+  </distributionManagement>
  </project>
