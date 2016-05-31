@@ -26,7 +26,7 @@
    <dependency>
      <groupId>edu.cmu.ml.rtw</groupId>
      <artifactId>micro-util</artifactId>
-     <version>0.0.4</version>
+     <version>0.0.5</version>
    </dependency>
    <dependency>
      <groupId>junit</groupId>
@@ -36,7 +36,7 @@
    <dependency>
      <groupId>edu.cmu.ml.rtw</groupId>
      <artifactId>micro-cat</artifactId>
-     <version>0.0.4</version>
+     <version>0.0.5</version>
    </dependency>
    <dependency>
      <groupId>edu.cmu.ml.rtw</groupId>
